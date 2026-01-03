@@ -1,9 +1,10 @@
 #pragma once
 
 #include "token.hpp"
-
+#include "instruction.hpp"
 #include <vector>
 #include <unordered_set>
+#include <stdexcept> 
 
 class Lexer {
     static std::unordered_set<std::string> TokenStrings;
