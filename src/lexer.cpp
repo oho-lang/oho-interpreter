@@ -1,8 +1,6 @@
 #include "lexer.hpp"
 #include "token.hpp"
 
-#include <stdexcept>
-
 std::unordered_set<std::string> Lexer::TokenStrings = std::unordered_set<std::string>{
     CN_O, CN_HO, CN_BANG,
     JP_O, JP_HO, JP_BANG

@@ -2,6 +2,7 @@
 
 #include "token.hpp"
 
+#include <stdexcept>
 #include <vector>
 #include <unordered_set>
 
