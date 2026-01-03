@@ -9,3 +9,6 @@ build/
 
 # CMake
 cmake-build/
+
+# clangd
+.cache/

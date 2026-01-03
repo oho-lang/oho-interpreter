@@ -25,9 +25,10 @@ Token Lexer::lexNext() {
             current_type_ = TokenType::Bang;
             break;
         case TokenType::Bang:
-            while (source_.substr(current_, STEP) == CN_BANG || source_.substr(current_, STEP) == JP_BANG) {
+            while (source_.substr(current_, STEP) == CN_BANG || source_.substr(current_, STEP) == JP_BANG
+                || source_.substr(current_, 6) == HEART_BANG) {
                 count++;
-                current_ += STEP;
+                current_ += source_.substr(current_, 6) == HEART_BANG ? 6 : STEP;
             }
             current_type_ = TokenType::O;
             break;
