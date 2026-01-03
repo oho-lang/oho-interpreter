@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <string>
+#include "instruction.hpp"
 
 enum class TokenType {
     O, Ho, Bang
@@ -28,9 +29,9 @@ struct Token {
 
 constexpr size_t STEP = 3;
 
-constexpr std::string CN_O = "哦";
-constexpr std::string CN_HO = "齁";
-constexpr std::string CN_BANG = "！";
-constexpr std::string JP_O = "オ";
-constexpr std::string JP_HO = "ホ";
-constexpr std::string JP_BANG = "！";
+constexpr const char* CN_O    = "\xe5\x93\xa6";   // 哦
+constexpr const char* CN_HO   = "\xe9\xbd\x81";   // 齁
+constexpr const char* CN_BANG = "\xef\xbc\x81";   // ！
+constexpr const char* JP_O    = "\xe3\x82\xaa";   // オ
+constexpr const char* JP_HO   = "\xe3\x83\x9b";   // ホ
+constexpr const char* JP_BANG = "\xef\xbc\x81";   // ！
