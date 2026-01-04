@@ -2,6 +2,7 @@
 #include "instruction.hpp"
 
 #include <print>
+#include <string>
 
 void Interpreter::load(const std::string &source) {
     auto tokens = lexer_.tokenize(source);
@@ -15,6 +16,14 @@ void Interpreter::run() {
         execute(inst);
         current_inst_++;
     }
+}
+
+std::string Interpreter::to_readable() {
+    std::string result;
+    for (const auto& inst : instructions_) {
+        result += inst.to_string() + "\n";
+    }
+    return result;
 }
 
 void Interpreter::execute(const Inst& inst) {

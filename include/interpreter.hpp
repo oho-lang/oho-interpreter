@@ -25,6 +25,7 @@ public:
     ~Interpreter() = default;
 
     void load(const std::string &source);
+    std::string to_readable();
     void run();
 private:
     void execute(const Inst& inst);
