@@ -72,7 +72,9 @@ void Interpreter::executePrint(const Inst& inst) {
     auto& mem = getVar(MEM_VAR);
     std::string output{};
     for (int i = 0; i < inst.value; i++) {
-        output += static_cast<char>(getVmem(var + i));
+        auto value = getVmem(var + i);
+        output += static_cast<uint32_t>(value);
+        // output += static_cast<char>(getVmem(var + i));
     }
     std::print("{}", output);
 }

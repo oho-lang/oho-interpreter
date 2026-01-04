@@ -20,3 +20,15 @@ std::string saveFile(const std::string &filepath, const std::string &content) {
     file_stream << content;
     return filepath;
 }
+
+std::size_t getUTF8ByteCount(int32_t value) {
+    if (value & 0b11110000000000000000000000000000) {
+        return 4;
+    } else if (value & 0b11100000000000000000000000000) {
+        return 3;
+    } else if (value & 0b1100000000000000000000000000) {
+        return 2;
+    } else {
+        return 1;
+    }
+}
