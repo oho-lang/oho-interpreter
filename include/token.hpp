@@ -35,4 +35,4 @@ constexpr const char* CN_BANG    = "\xef\xbc\x81";   // ！
 constexpr const char* JP_O       = "\xe3\x82\xaa";   // オ
 constexpr const char* JP_HO      = "\xe3\x83\x9b";   // ホ
 constexpr const char* JP_BANG    = "\xef\xbc\x81";   // ！
-constexpr const char* HEART_BANG = "\xe2\x9d\xa4\xef\xb8\x8f"; // ❤️
+constexpr const char* HEART_BANG = "\xe2\x9d\xa4";   // ❤
